@@ -3,27 +3,30 @@
 <title>Tutoría Inglés</title>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <style>
       body {
-        font-family: 'Aldrich';font-size: 22px;
-        background-color: powderblue;
+        font-family: 'Noto Sans JP';font-size: 22px;
+        background-color: #6ABAF5;
     }
     
    .responsive {
     max-width: 60%;
     height: auto;
-     .active {
-  background-color: #4CAF50;
-}
-}
+    }
+    
     ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 li {
@@ -38,16 +41,48 @@ li a {
   text-decoration: none;
 }
 
-
-li a:hover {
+li a:hover:not(.active) {
   background-color: #111;
 }
-  </style>
+    
+    ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #E8E8E8; color: #000000;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+    
+    h1.topscreen {
+     padding-top: 64px;
+    }
+</style>
 </head>
 <body>
   
   <ul>
-  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html"><i class="fa fa-home"></i></a></li>
   <li><a href="contact.html">Contact</a></li>
   <li><a class="active" href="about.html">About</a></li>
 </ul>
